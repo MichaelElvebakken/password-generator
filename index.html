@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div id="message" class="warning">Warning</div>
+    <main>
+        <div class="generator">
+            <input type="text" id="password-field">
+            <div class="buttons">
+                <button onclick="generatePassword()">Regenerate</button>
+                <button onclick="copyText('#password-field')" id="copy-button">Copy</button>
+            </div>
+
+        </div>
+        <div class="settings-container">
+        <h1>Settings</h1>
+
+        <div class="settings">
+            <div class="checkboxes cool-checkboxes">
+                <input type="checkbox" id="lowercase" checked>
+                <label for="lowercase">Lowercase</label>
+                <input type="checkbox" id="uppercase" checked>
+                <label for="uppercase">Uppercase</label>
+                <input type="checkbox" id="numbers" checked>
+                <label for="numbers">Numbers</label>
+                <input type="checkbox" id="symbols" checked>
+                <label for="symbols">Symbols</label>
+                <input type="checkbox" id="special-characters">
+                <label for="special-characters">Special Characters</label>
+            </div>
+
+            <div class="inputs">
+                <label for="password length">Password length</label>
+                <input type="text" id="password-length" value="16">
+                <label for="include characters">Include characters</label>
+                <input type="text" id="include-characters">
+                <label for="exclude characters">Exclude characters</label>
+                <input type="text" id="exclude-characters">
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <script src="javascript/index.js"></script>
+</body>
+</html>
